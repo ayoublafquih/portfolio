@@ -46,6 +46,15 @@
 
       <!-- Right actions -->
       <div class="flex items-center gap-2">
+        <!-- Theme toggle -->
+        <button
+          class="p-2 rounded-lg text-text-muted hover:text-text-primary hover:bg-surface transition-all duration-200"
+          :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
+          @click="toggleTheme()"
+        >
+          <Icon :icon="isDark ? 'mdi:weather-sunny' : 'mdi:weather-night'" width="20" />
+        </button>
+
         <!-- Language switcher -->
         <button
           class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-text-muted hover:text-text-primary
@@ -122,6 +131,7 @@ import { useI18n } from 'vue-i18n'
 import { useWindowScroll } from '@vueuse/core'
 import { Icon } from '@iconify/vue'
 import { config } from '@/config'
+import { isDark, toggleTheme } from '@/composables/useTheme'
 
 const { locale } = useI18n({ useScope: 'global' })
 const { y: scrollY } = useWindowScroll()
