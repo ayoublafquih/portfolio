@@ -126,6 +126,7 @@ import { ref, onMounted } from 'vue'
 import { gsap } from 'gsap'
 import { Icon } from '@iconify/vue'
 import { config } from '@/config'
+import { frameworks } from '@/config/frameworks';
 import photo from '@/assets/images/photo.jpeg'
 
 const heroEl    = ref<HTMLElement | null>(null)
@@ -137,14 +138,7 @@ const ctaEl     = ref<HTMLElement | null>(null)
 const photoEl   = ref<HTMLElement | null>(null)
 const stackEl   = ref<HTMLElement | null>(null)
 
-const coreStack = [
-  { name: 'Nuxt',    icon: 'simple-icons:nuxtdotjs',  color: '#00dc82', exp: '2+ yrs' },
-  { name: 'Vue.js',  icon: 'mdi:vuejs',               color: '#42b883', exp: '4+ yrs' },
-  { name: 'Angular', icon: 'mdi:angular',              color: '#dd0031', exp: '5+ yrs' },
-  { name: 'Node.js', icon: 'mdi:nodejs',               color: '#5fa04e', exp: '6+ yrs' },
-  { name: 'NestJS',  icon: 'simple-icons:nestjs',      color: '#e0234e', exp: '2+ yrs' },
-  { name: 'GCP',     icon: 'simple-icons:googlecloud', color: '#4285f4', exp: '2+ yrs' },
-]
+const coreStack = frameworks;
 
 onMounted(() => {
   gsap.set(
@@ -165,7 +159,7 @@ onMounted(() => {
     .fromTo('.stack-card',
       { opacity: 0, y: 16, scale: 0.94 },
       { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: 'power2.out', stagger: 0.07 },
-      1.0)
+      1)
 })
 </script>
 
