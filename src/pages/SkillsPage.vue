@@ -208,10 +208,8 @@ const skillCategories = computed(() => {
 
 const exploring = [
   { name: 'LLM / AI Integration', icon: 'mdi:brain' },
-  { name: 'Rust', icon: 'mdi:language-rust' },
   { name: 'Bun.js' },
   { name: 'Hono.js' },
-  { name: 'WebAssembly' },
 ]
 
 onMounted(() => {
