@@ -8,6 +8,46 @@
         <p class="section-subtitle max-w-2xl">{{ $t('skills.subtitle') }}</p>
       </div>
 
+      <!-- ── Featured frameworks ──────────────────────────────── -->
+      <div ref="featuredEl" class="opacity-0 mb-16">
+        <p class="text-text-muted text-xs font-semibold uppercase tracking-widest mb-6">
+          Principal Frameworks
+        </p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+          <a
+            v-for="fw in featuredFrameworks"
+            :key="fw.name"
+            class="featured-fw-card group"
+            :style="{ '--fw-color': fw.color }"
+          >
+            <!-- Glow bg -->
+            <div class="featured-fw-glow" />
+
+            <!-- Icon -->
+            <div
+              class="featured-fw-icon"
+              :style="{ background: `color-mix(in srgb, ${fw.color} 12%, transparent)`,
+                        border: `1px solid color-mix(in srgb, ${fw.color} 28%, transparent)` }"
+            >
+              <Icon :icon="fw.icon" width="28" :style="{ color: fw.color }" />
+            </div>
+
+            <!-- Name -->
+            <p class="text-text-primary font-bold text-sm mt-3 mb-1">{{ fw.name }}</p>
+
+            <!-- Experience badge -->
+            <span
+              class="featured-fw-badge"
+              :style="{ background: `color-mix(in srgb, ${fw.color} 12%, transparent)`,
+                        border: `1px solid color-mix(in srgb, ${fw.color} 25%, transparent)`,
+                        color: fw.color }"
+            >
+              {{ fw.exp }}
+            </span>
+          </a>
+        </div>
+      </div>
+
       <!-- Skills grid -->
       <div class="grid sm:grid-cols-2 gap-5">
         <SkillCategory
@@ -53,8 +93,18 @@ import SkillBadge from '@/components/skills/SkillBadge.vue'
 
 const { t } = useI18n()
 
-const headerEl = ref<HTMLElement | null>(null)
+const headerEl   = ref<HTMLElement | null>(null)
 const learningEl = ref<HTMLElement | null>(null)
+const featuredEl = ref<HTMLElement | null>(null)
+
+const featuredFrameworks = [
+  { name: 'Nuxt',    icon: 'simple-icons:nuxtdotjs',      color: '#00dc82', exp: '2+ yrs' },
+  { name: 'Vue.js',  icon: 'mdi:vuejs',                   color: '#42b883', exp: '4+ yrs' },
+  { name: 'Angular', icon: 'mdi:angular',                  color: '#dd0031', exp: '5+ yrs' },
+  { name: 'Node.js', icon: 'mdi:nodejs',                   color: '#5fa04e', exp: '6+ yrs' },
+  { name: 'NestJS',  icon: 'simple-icons:nestjs',          color: '#e0234e', exp: '2+ yrs' },
+  { name: 'GCP',     icon: 'simple-icons:googlecloud',     color: '#4285f4', exp: '2+ yrs' },
+]
 
 const skillCategories = computed(() => {
   return [
@@ -180,6 +230,19 @@ onMounted(() => {
   )
 
   gsap.fromTo(
+    featuredEl.value,
+    { opacity: 0, y: 24 },
+    { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out', delay: 0.15,
+      scrollTrigger: { trigger: featuredEl.value, start: 'top 88%' } },
+  )
+
+  gsap.fromTo(
+    '.featured-fw-card',
+    { opacity: 0, y: 18, scale: 0.96 },
+    { opacity: 1, y: 0, scale: 1, duration: 0.45, ease: 'power2.out', stagger: 0.08, delay: 0.25 },
+  )
+
+  gsap.fromTo(
     '.skill-category-card',
     { opacity: 0, y: 20 },
     { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out', stagger: 0.1, delay: 0.2 },
@@ -192,3 +255,73 @@ onMounted(() => {
   )
 })
 </script>
+
+<style scoped>
+/* ── Featured framework card ───────────────────────────────── */
+.featured-fw-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  border-radius: 1.25rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-surface-border);
+  overflow: hidden;
+  cursor: default;
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+
+.featured-fw-card:hover {
+  border-color: color-mix(in srgb, var(--fw-color) 40%, transparent);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px color-mix(in srgb, var(--fw-color) 18%, transparent);
+}
+
+/* Radial glow that activates on hover */
+.featured-fw-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 80% 60% at 50% 0%,
+    color-mix(in srgb, var(--fw-color) 10%, transparent),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.featured-fw-card:hover .featured-fw-glow {
+  opacity: 1;
+}
+
+/* Icon box */
+.featured-fw-icon {
+  position: relative;
+  z-index: 1;
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s;
+}
+
+.featured-fw-card:hover .featured-fw-icon {
+  transform: scale(1.1);
+}
+
+/* Experience badge */
+.featured-fw-badge {
+  position: relative;
+  z-index: 1;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  letter-spacing: 0.03em;
+}
+</style>

@@ -83,6 +83,24 @@
               {{ $t('hero.contact') }}
             </RouterLink>
           </div>
+
+          <!-- Tech stack strip -->
+          <div ref="stackEl" class="opacity-0 mt-10">
+            <p class="text-text-muted text-xs font-semibold uppercase tracking-widest mb-4 text-center lg:text-left">
+              Core stack
+            </p>
+            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3">
+              <span
+                v-for="tech in coreStack"
+                :key="tech.name"
+                class="hero-tech-pill"
+                :style="{ '--tech-color': tech.color }"
+              >
+                <Icon :icon="tech.icon" width="16" :style="{ color: tech.color }" />
+                {{ tech.name }}
+              </span>
+            </div>
+          </div>
         </div>
 
         <!-- Right: Photo -->
@@ -124,6 +142,16 @@ const taglineEl = ref<HTMLElement | null>(null)
 const descEl    = ref<HTMLElement | null>(null)
 const ctaEl     = ref<HTMLElement | null>(null)
 const photoEl   = ref<HTMLElement | null>(null)
+const stackEl   = ref<HTMLElement | null>(null)
+
+const coreStack = [
+  { name: 'Nuxt',    icon: 'simple-icons:nuxtdotjs',  color: '#00dc82' },
+  { name: 'Vue.js',  icon: 'mdi:vuejs',               color: '#42b883' },
+  { name: 'Angular', icon: 'mdi:angular',              color: '#dd0031' },
+  { name: 'Node.js', icon: 'mdi:nodejs',               color: '#5fa04e' },
+  { name: 'NestJS',  icon: 'simple-icons:nestjs',      color: '#e0234e' },
+  { name: 'GCP',     icon: 'simple-icons:googlecloud', color: '#4285f4' },
+]
 
 onMounted(() => {
   gsap.set(
@@ -140,6 +168,7 @@ onMounted(() => {
     .to(taglineEl.value, { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, 0.62)
     .to(descEl.value,    { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, 0.74)
     .to(ctaEl.value,     { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, 0.86)
+    .to(stackEl.value,   { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, 1.0)
 })
 </script>
 
@@ -222,5 +251,26 @@ onMounted(() => {
   left: 12px;
   animation-delay: 1.5s;
   background: rgba(129, 140, 248, 0.8);
+}
+
+/* ── Hero tech pill ────────────────────────────────────────── */
+.hero-tech-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: color-mix(in srgb, var(--tech-color) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--tech-color) 28%, transparent);
+  color: var(--color-text-secondary);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: default;
+}
+
+.hero-tech-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--tech-color) 25%, transparent);
 }
 </style>
