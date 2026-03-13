@@ -51,14 +51,12 @@ import { Icon } from '@iconify/vue'
 import SkillCategory from '@/components/skills/SkillCategory.vue'
 import SkillBadge from '@/components/skills/SkillBadge.vue'
 
-const { t, locale } = useI18n()
+const { t } = useI18n()
 
 const headerEl = ref<HTMLElement | null>(null)
 const learningEl = ref<HTMLElement | null>(null)
 
 const skillCategories = computed(() => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const _locale = locale.value // reactive dependency so computed re-runs on locale change
   return [
   {
     category: t('skills.categories.frontend'),

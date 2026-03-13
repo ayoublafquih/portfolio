@@ -84,13 +84,10 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { useI18n } from 'vue-i18n'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Icon } from '@iconify/vue'
 import { config } from '@/config'
-
-const { t } = useI18n()
 
 const headerEl = ref<HTMLElement | null>(null)
 const linksEl = ref<HTMLElement | null>(null)

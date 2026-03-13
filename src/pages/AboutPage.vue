@@ -142,7 +142,7 @@ import { Icon } from '@iconify/vue'
 import ExpertiseCard from '@/components/about/ExpertiseCard.vue'
 import { config } from '@/config'
 
-const { t, tm, locale } = useI18n()
+const { t, tm } = useI18n()
 
 const headerEl = ref<HTMLElement | null>(null)
 const bioEl = ref<HTMLElement | null>(null)
@@ -172,8 +172,6 @@ const expertiseCards = [
 ]
 
 const education = computed(() => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const _locale = locale.value // reactive dependency so computed re-runs on locale change
   return (tm('about.education') as any[]).map((_, i) => ({
     degree: t(`about.education[${i}].degree`),
     school: t(`about.education[${i}].school`),
@@ -182,8 +180,6 @@ const education = computed(() => {
 })
 
 const certifications = computed(() => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const _locale = locale.value // reactive dependency so computed re-runs on locale change
   return (tm('about.certifications') as any[]).map((_, i) => ({
     name: t(`about.certifications[${i}].name`),
     issuer: t(`about.certifications[${i}].issuer`),

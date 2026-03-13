@@ -6,7 +6,7 @@ import SkillsPage from '@/pages/SkillsPage.vue'
 import ContactPage from '@/pages/ContactPage.vue'
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     { path: '/', component: HomePage },
     { path: '/about', component: AboutPage },

@@ -15,11 +15,9 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import TimelineItem from './TimelineItem.vue'
 
-const { t, tm, locale } = useI18n()
+const { t, tm } = useI18n()
 
 const experiences = computed(() => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const _locale = locale.value // reactive dependency so computed re-runs on locale change
   return (tm('experience.jobs') as any[]).map((job, i) => ({
     role: t(`experience.jobs[${i}].role`),
     company: job.company as string,

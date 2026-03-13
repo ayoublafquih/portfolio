@@ -5,7 +5,7 @@ export const config = {
     full: 'Ayoub Lafquih',
     initials: 'AL',
   },
-  email: 'lafquihayoub@gmail.com',
+  email: 'ayoub.lafquih.pro@gmail.com',
   links: {
     github: 'https://github.com/ayoublafquih',
     linkedin: 'https://www.linkedin.com/in/ayoub-lafquih-js/',
