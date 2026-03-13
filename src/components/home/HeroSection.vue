@@ -34,9 +34,9 @@
 
       <!-- Name -->
       <h1 ref="nameEl" class="opacity-0 text-5xl md:text-7xl font-extrabold leading-tight mb-4">
-        <span class="text-text-primary">Ayoub</span>
-        <br />
-        <span class="gradient-text">Lafquih</span>
+        <span class="text-text-primary">{{ config.name.first }}</span>
+            <br />
+            <span class="gradient-text">{{ config.name.last }}</span>
       </h1>
 
       <!-- Title -->
@@ -57,7 +57,7 @@
       <!-- CTA Buttons -->
       <div ref="ctaEl" class="opacity-0 flex flex-col sm:flex-row items-center justify-center gap-4">
         <a
-          href="https://github.com/lafquihayoub"
+          :href="config.links.github"
           target="_blank"
           rel="noopener noreferrer"
           class="btn-primary"
@@ -66,7 +66,7 @@
           {{ $t('hero.github') }}
         </a>
         <a
-          href="https://www.linkedin.com/in/ayoub-lafquih-js/"
+          :href="config.links.linkedin"
           target="_blank"
           rel="noopener noreferrer"
           class="btn-outline"
@@ -79,15 +79,6 @@
           {{ $t('hero.contact') }}
         </RouterLink>
       </div>
-
-      <!-- Scroll indicator -->
-      <div
-        ref="scrollEl"
-        class="opacity-0 absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-      >
-        <span class="text-text-muted text-xs tracking-widest uppercase">{{ $t('hero.scroll') }}</span>
-        <div class="w-px h-12 bg-gradient-to-b from-accent/60 to-transparent" />
-      </div>
     </div>
   </section>
 </template>
@@ -96,6 +87,7 @@
 import { ref, onMounted } from 'vue'
 import { gsap } from 'gsap'
 import { Icon } from '@iconify/vue'
+import { config } from '@/config'
 
 const heroEl = ref<HTMLElement | null>(null)
 const badgeEl = ref<HTMLElement | null>(null)

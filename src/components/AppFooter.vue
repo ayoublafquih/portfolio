@@ -7,10 +7,10 @@
           <div
             class="w-8 h-8 rounded-lg bg-accent/10 border border-accent/30 flex items-center justify-center"
           >
-            <span class="text-accent font-bold text-xs">AL</span>
+            <span class="text-accent font-bold text-xs">{{ config.name.initials }}</span>
           </div>
           <div>
-            <p class="text-text-secondary text-sm font-medium">Ayoub Lafquih</p>
+            <p class="text-text-secondary text-sm font-medium">{{ config.name.full }}</p>
             <p class="text-text-muted text-xs">{{ $t('footer.role') }}</p>
           </div>
         </div>
@@ -30,7 +30,7 @@
         <!-- Social links -->
         <div class="flex items-center gap-3">
           <a
-            href="https://github.com/lafquihayoub"
+            :href="config.links.github"
             target="_blank"
             rel="noopener noreferrer"
             class="p-2 rounded-lg text-text-muted hover:text-text-primary hover:bg-surface transition-all duration-200"
@@ -39,7 +39,7 @@
             <Icon icon="mdi:github" width="18" />
           </a>
           <a
-            href="https://www.linkedin.com/in/ayoub-lafquih-js/"
+            :href="config.links.linkedin"
             target="_blank"
             rel="noopener noreferrer"
             class="p-2 rounded-lg text-text-muted hover:text-text-primary hover:bg-surface transition-all duration-200"
@@ -48,7 +48,7 @@
             <Icon icon="mdi:linkedin" width="18" />
           </a>
           <a
-            href="mailto:lafquihayoub@gmail.com"
+            :href="`mailto:${config.email}`"
             class="p-2 rounded-lg text-text-muted hover:text-text-primary hover:bg-surface transition-all duration-200"
             aria-label="Email"
           >
@@ -60,7 +60,7 @@
       <!-- Bottom line -->
       <div class="mt-8 pt-6 border-t border-surface-border/50 flex flex-col sm:flex-row items-center justify-between gap-2">
         <p class="text-text-muted text-xs">
-          © {{ new Date().getFullYear() }} Ayoub Lafquih. {{ $t('footer.built') }}
+          © {{ new Date().getFullYear() }} {{ config.name.full }}. {{ $t('footer.built') }}
         </p>
         <p class="text-text-muted text-xs">
           {{ $t('footer.location') }}
@@ -72,6 +72,7 @@
 
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
+import { config } from '@/config'
 
 const footerLinks = [
   { to: '/about', labelKey: 'nav.about' },

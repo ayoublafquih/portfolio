@@ -9,11 +9,12 @@
       </div>
 
       <!-- Skills grid -->
-      <div class="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-5">
+      <div class="grid sm:grid-cols-2 gap-5">
         <SkillCategory
-          v-for="cat in skillCategories"
+          v-for="(cat, index) in skillCategories"
           :key="cat.category"
           v-bind="cat"
+          :class="{ 'sm:col-span-2': index === skillCategories.length - 1 && skillCategories.length % 2 !== 0 }"
         />
       </div>
 
@@ -138,6 +139,26 @@ const skillCategories = computed(() => {
       { name: 'Microservices' },
       { name: 'DDD' },
       { name: 'CQRS' },
+    ],
+  },
+  {
+    category: t('skills.categories.softskills'),
+    icon: 'mdi:account-heart-outline',
+    color: '#f59e0b',
+    skills: [
+      { name: t('skills.softskills.techLeadership'), icon: 'mdi:account-group-outline' },
+      { name: t('skills.softskills.mentoring'), icon: 'mdi:school-outline' },
+      { name: t('skills.softskills.agileScrum'), icon: 'mdi:refresh' },
+      { name: t('skills.softskills.codeReview'), icon: 'mdi:code-review' },
+      { name: t('skills.softskills.collaboration'), icon: 'mdi:handshake-outline' },
+      { name: t('skills.softskills.documentation'), icon: 'mdi:file-document-outline' },
+      { name: t('skills.softskills.problemSolving'), icon: 'mdi:lightbulb-outline' },
+      { name: t('skills.softskills.ownership'), icon: 'mdi:shield-star-outline' },
+      { name: t('skills.softskills.communication'), icon: 'mdi:message-text-outline' },
+      { name: t('skills.softskills.adaptability'), icon: 'mdi:lightning-bolt-outline' },
+      { name: t('skills.softskills.ethicalThinking'), icon: 'mdi:scale-balance' },
+      { name: t('skills.softskills.userEmpathy'), icon: 'mdi:heart-outline' },
+      { name: t('skills.softskills.continuousLearning'), icon: 'mdi:book-open-page-variant-outline' },
     ],
   },
   ]

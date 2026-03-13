@@ -182,7 +182,23 @@
       "frontend": "Frontend",
       "backend": "Backend",
       "cloud": "Cloud & DevOps",
-      "security": "Security & Architecture"
+      "security": "Security & Architecture",
+      "softskills": "Soft Skills"
+    },
+    "softskills": {
+      "techLeadership": "Tech Leadership",
+      "mentoring": "Mentoring",
+      "agileScrum": "Agile / Scrum",
+      "codeReview": "Code Review",
+      "collaboration": "Cross-team Collaboration",
+      "documentation": "Technical Documentation",
+      "problemSolving": "Problem Solving",
+      "ownership": "Ownership & Autonomy",
+      "communication": "Communication",
+      "adaptability": "Adaptability",
+      "ethicalThinking": "Ethical Thinking",
+      "userEmpathy": "User Empathy",
+      "continuousLearning": "Continuous Learning"
     }
   },
   "contact": {

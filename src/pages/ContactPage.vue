@@ -63,7 +63,7 @@
             </div>
 
             <!-- CTA -->
-            <a href="mailto:lafquihayoub@gmail.com" class="btn-primary w-full justify-center">
+            <a :href="`mailto:${config.email}`" class="btn-primary w-full justify-center">
               <Icon icon="mdi:send-outline" width="16" />
               {{ $t('contact.cta') }}
             </a>
@@ -88,6 +88,7 @@ import { useI18n } from 'vue-i18n'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Icon } from '@iconify/vue'
+import { config } from '@/config'
 
 const { t } = useI18n()
 
@@ -99,24 +100,24 @@ const locationEl = ref<HTMLElement | null>(null)
 const contactLinks = [
   {
     labelKey: 'contact.links.email',
-    display: 'lafquihayoub@gmail.com',
-    href: 'mailto:lafquihayoub@gmail.com',
+    display: config.email,
+    href: `mailto:${config.email}`,
     icon: 'mdi:email-outline',
     color: '#6366f1',
     external: false,
   },
   {
     labelKey: 'contact.links.linkedin',
-    display: 'linkedin.com/in/ayoub-lafquih-js',
-    href: 'https://www.linkedin.com/in/ayoub-lafquih-js/',
+    display: config.display.linkedin,
+    href: config.links.linkedin,
     icon: 'mdi:linkedin',
     color: '#0a66c2',
     external: true,
   },
   {
     labelKey: 'contact.links.github',
-    display: 'github.com/lafquihayoub',
-    href: 'https://github.com/lafquihayoub',
+    display: config.display.github,
+    href: config.links.github,
     icon: 'mdi:github',
     color: '#f8fafc',
     external: true,

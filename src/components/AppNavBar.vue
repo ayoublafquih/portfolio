@@ -18,10 +18,10 @@
           class="w-9 h-9 rounded-lg bg-accent/10 border border-accent/30 flex items-center justify-center
                  group-hover:bg-accent/20 group-hover:border-accent/60 transition-all duration-300"
         >
-          <span class="text-accent font-bold text-sm tracking-tight">AL</span>
+          <span class="text-accent font-bold text-sm tracking-tight">{{ config.name.initials }}</span>
         </div>
         <span class="hidden sm:block text-text-secondary text-sm font-medium group-hover:text-text-primary transition-colors">
-          Ayoub Lafquih
+          {{ config.name.full }}
         </span>
       </RouterLink>
 
@@ -60,7 +60,7 @@
 
         <!-- GitHub link -->
         <a
-          href="https://github.com/lafquihayoub"
+          :href="config.links.github"
           target="_blank"
           rel="noopener noreferrer"
           class="p-2 rounded-lg text-text-muted hover:text-text-primary hover:bg-surface transition-all duration-200"
@@ -71,7 +71,7 @@
 
         <!-- LinkedIn link -->
         <a
-          href="https://www.linkedin.com/in/ayoub-lafquih-js/"
+          :href="config.links.linkedin"
           target="_blank"
           rel="noopener noreferrer"
           class="p-2 rounded-lg text-text-muted hover:text-text-primary hover:bg-surface transition-all duration-200"
@@ -121,8 +121,9 @@ import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { useWindowScroll } from '@vueuse/core'
 import { Icon } from '@iconify/vue'
+import { config } from '@/config'
 
-const { locale, setLocale } = useI18n({ useScope: 'global' })
+const { locale } = useI18n({ useScope: 'global' })
 const { y: scrollY } = useWindowScroll()
 const scrolled = computed(() => scrollY.value > 20)
 const mobileOpen = ref(false)
@@ -137,7 +138,7 @@ const navLinks = [
 
 function switchLocale() {
   const next = locale.value === 'en' ? 'fr' : 'en'
-  setLocale(next)
+  locale.value = next
   localStorage.setItem('locale', next)
 }
 

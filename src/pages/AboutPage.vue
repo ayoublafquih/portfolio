@@ -55,7 +55,7 @@
               </div>
               <div>
                 <p class="text-text-muted text-xs">{{ $t('about.quickInfo.email') }}</p>
-                <p class="text-text-secondary text-sm font-medium">lafquihayoub@gmail.com</p>
+                <p class="text-text-secondary text-sm font-medium">{{ config.email }}</p>
               </div>
             </div>
           </div>
@@ -140,6 +140,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Icon } from '@iconify/vue'
 import ExpertiseCard from '@/components/about/ExpertiseCard.vue'
+import { config } from '@/config'
 
 const { t, tm, locale } = useI18n()
 

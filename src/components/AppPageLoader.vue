@@ -59,7 +59,7 @@
           ref="nameEl"
           class="text-text-muted text-xs tracking-[0.3em] uppercase font-medium opacity-0"
         >
-          Ayoub Lafquih
+          {{ config.name.full }}
         </p>
       </div>
     </div>
@@ -69,6 +69,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { gsap } from 'gsap'
+import { config } from '@/config'
 
 const emit = defineEmits<{ done: [] }>()
 
