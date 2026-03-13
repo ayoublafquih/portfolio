@@ -1,0 +1,211 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "experience": "Expérience",
+    "skills": "Compétences",
+    "contact": "Contact",
+    "toggleMenu": "Ouvrir le menu"
+  },
+  "footer": {
+    "role": "Développeur Full Stack JavaScript",
+    "built": "Créé avec Vue 3 & Vite.",
+    "location": "Paris – Lille, France"
+  },
+  "hero": {
+    "available": "Disponible pour de nouvelles opportunités",
+    "title": "Développeur Full Stack JavaScript",
+    "tagline": "SaaS · Plateformes Data · E-commerce · Intégration IA",
+    "description": "Je construis des applications web performantes, sécurisées et scalables — plateformes SaaS avec données en temps réel, parcours e-commerce utilisés par des millions d'utilisateurs, et outils IA qui divisent le temps d'analyse par deux.",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "contact": "Me contacter",
+    "scroll": "Défiler"
+  },
+  "about": {
+    "seoTitle": "À propos — Ayoub Lafquih",
+    "seoDescription": "Développeur Full Stack JavaScript spécialisé dans les plateformes SaaS, l'e-commerce et les applications data. Basé à Lille, disponible Paris & remote.",
+    "title": "À propos",
+    "subtitle": "Construction d'applications performantes, scalables et sécurisées depuis 2019.",
+    "bio1": "Je suis Ayoub Lafquih, Développeur Full Stack JavaScript basé entre Lille et Paris. Ces 6 dernières années, j'ai construit des applications de production chez Valiuz, Galeries Lafayette et Nordnet — des plateformes SaaS de data aux parcours e-commerce utilisés par des millions d'utilisateurs.",
+    "bio2": "Mon stack s'articule autour de l'écosystème JavaScript moderne : Vue/Nuxt et Angular côté frontend, Node.js/NestJS côté backend, et Google Cloud pour l'infrastructure. Je suis particulièrement attaché aux décisions d'architecture qui vieillissent bien — feature flags, RBAC, contrats gRPC, et pipelines CI/CD sur lesquels les équipes peuvent compter.",
+    "bio3": "Au-delà du code, je me soucie de l'expérience développeur, de la conception d'API propres et du pont entre les équipes engineering, produit et data. J'ai encadré des équipes frontend, animé des code reviews et accompagné des développeurs juniors — la dimension humaine du travail compte autant que la dimension technique.",
+    "stats": {
+      "years": "Ans d'exp.",
+      "companies": "Entreprises",
+      "coffee": "Cafés bus"
+    },
+    "quickInfo": {
+      "title": "Infos rapides",
+      "location": "Localisation",
+      "role": "Poste",
+      "roleValue": "Développeur Full Stack JS",
+      "languages": "Langues",
+      "languagesValue": "Français, Anglais, Arabe, Allemand",
+      "email": "Email"
+    },
+    "availability": {
+      "title": "Disponible pour des opportunités",
+      "subtitle": "Ouvert aux postes en CDI, freelance & remote"
+    },
+    "expertiseTitle": "Domaines d'expertise",
+    "expertise": {
+      "saas": {
+        "title": "Architecture SaaS",
+        "description": "Concevoir et construire des plateformes SaaS multi-tenant avec feature flags, contrôle d'accès basé sur les rôles et microservices scalables. Actuellement chez Valiuz sur une plateforme de visualisation data sur GCP."
+      },
+      "data": {
+        "title": "Visualisation de données",
+        "description": "Créer des dashboards temps réel et des plateformes data avec GCP (BigQuery, Pub/Sub, Firestore), Prometheus et Grafana — pour transformer des données complexes en insights actionnables."
+      },
+      "ecommerce": {
+        "title": "E-commerce",
+        "description": "Construit l'ensemble du parcours utilisateur chez Galeries Lafayette avec SAP Spartacus & Angular — recherche, recommandations, listings, fiches produits — contribuant à une hausse mesurable du taux de conversion."
+      },
+      "security": {
+        "title": "Sécurité & Auth",
+        "description": "Implémenter des stratégies d'authentification et d'autorisation robustes avec Auth0, JWT, RBAC et OAuth 2.0. Systèmes de gestion des accès déployés sur des architectures SaaS et e-commerce distribuées."
+      },
+      "ai": {
+        "title": "Intégration IA",
+        "description": "Intégré Gemini AI chez Valiuz pour générer automatiquement des rapports de performance Retail Media, réduisant de 40% le temps de production des analyses. Expérimenté en APIs LLM et prompt engineering."
+      },
+      "leadership": {
+        "title": "Tech Leadership",
+        "description": "Encadré des équipes frontend chez Galeries Lafayette, défini les standards techniques, animé code reviews et sessions de pair programming, et accompagné des développeurs dans des environnements agiles."
+      }
+    },
+    "educationTitle": "Formation",
+    "education": [
+      {
+        "degree": "Master — E-Services, Informatique",
+        "school": "Université de Lille — Sciences et Technologies",
+        "period": "2018 — 2020"
+      }
+    ],
+    "certificationsTitle": "Certifications",
+    "certifications": [
+      {
+        "name": "Google Cloud Fundamentals: Core Infrastructure",
+        "issuer": "Google",
+        "date": "Oct 2025"
+      },
+      {
+        "name": "Configure Service Accounts and IAM Roles for Google Cloud",
+        "issuer": "Google Cloud Skill Badge",
+        "date": "Oct 2025"
+      },
+      {
+        "name": "Deploy Kubernetes Applications on Google Cloud",
+        "issuer": "Google Cloud Skill Badge",
+        "date": "Oct 2025"
+      },
+      {
+        "name": "Use APIs to Work with Cloud Storage",
+        "issuer": "Google Cloud Skill Badge",
+        "date": "Juil 2025"
+      },
+      {
+        "name": "Cloud Functions: 3 Ways",
+        "issuer": "Google Cloud Skill Badge",
+        "date": "Juil 2025"
+      },
+      {
+        "name": "Get Started with Pub/Sub",
+        "issuer": "Google Cloud Skill Badge",
+        "date": "Juil 2025"
+      },
+      {
+        "name": "Cloud Application Developer 2018 — Mastery Award for Educators",
+        "issuer": "IBM Academic",
+        "date": "2018"
+      }
+    ]
+  },
+  "experience": {
+    "seoTitle": "Expérience — Ayoub Lafquih",
+    "seoDescription": "Développeur Full Stack JS — 6 ans sur des plateformes SaaS, e-commerce et data chez Valiuz, Galeries Lafayette et Nordnet.",
+    "title": "Expérience",
+    "subtitle": "6 ans à construire des applications de production à grande échelle — SaaS, e-commerce et plateformes data.",
+    "jobs": [
+      {
+        "role": "Développeur Full Stack",
+        "company": "Valiuz",
+        "location": "Lille, France",
+        "period": "Mars 2024 — Présent",
+        "bullets": [
+          "Conçu et développé une plateforme SaaS de visualisation de données avec Nuxt 3 et GCP, rendant les insights Retail Media accessibles et lisibles pour les équipes métier du groupe.",
+          "Développé des microservices NestJS exposant des APIs gRPC et GraphQL, avec documentation complète et suites de tests unitaires/intégration.",
+          "Intégré Gemini AI pour générer automatiquement des rapports de performance des campagnes Retail Media, réduisant de 40% le temps de production des analyses.",
+          "Mis en place un système de feature flags avec Flagd, permettant des déploiements progressifs et sécurisés sans toucher aux configurations de production.",
+          "Implémenté un système de gestion des accès avec Auth0 et RBAC, contrôlant les permissions utilisateurs et la gouvernance des données par rôle métier.",
+          "Travaillé en étroite collaboration avec les équipes data et produit pour assurer une intégration fluide et un alignement entre exigences techniques et business."
+        ],
+        "stack": ["Nuxt 3", "NestJS", "GraphQL", "gRPC", "Auth0", "RBAC", "Gemini AI", "Flagd", "GCP", "Docker"]
+      },
+      {
+        "role": "Tech Lead Angular",
+        "company": "Galeries Lafayette",
+        "location": "Paris, France",
+        "period": "Sep 2022 — Déc 2023",
+        "bullets": [
+          "Conçu et développé l'ensemble du parcours e-commerce — recherche, recommandations, listings et fiches produits — avec SAP Spartacus et Angular.",
+          "Déployé Google Tag Manager pour le tracking utilisateur, améliorant la précision des données et permettant aux équipes marketing de prendre de meilleures décisions.",
+          "Encadré une équipe de développeurs : gestion de la roadmap, code reviews, sessions de pair programming et pair testing.",
+          "Maintenu une documentation technique complète sur Jira et Confluence, assurant la traçabilité et l'alignement entre l'IT et le business."
+        ],
+        "stack": ["Angular", "SAP Spartacus", "TypeScript", "GTM", "RxJS", "Node.js", "Jest", "GitLab CI"]
+      },
+      {
+        "role": "Développeur Angular / Node.js",
+        "company": "Nordnet",
+        "location": "Lille, France",
+        "period": "Sep 2019 — Août 2022",
+        "bullets": [
+          "Développé plusieurs applications web stratégiques — vente de produits Internet, digitalisation des subventions — avec Angular, RxJS, Nx, NgRx, SSR et Node.js.",
+          "Conduit la migration d'une application AngularJS de production vers Angular 11, améliorant significativement les performances et la maintenabilité à long terme.",
+          "Créé une bibliothèque de composants et un design system avec Storybook, réduisant le temps de développement UI de 30% et instaurant la cohérence visuelle entre les produits.",
+          "Déployé une stratégie de tests automatisés avec Cypress et Jest, réduisant le taux de régressions en production.",
+          "Mis en place des pipelines CI/CD sur GitLab CI, réduisant le temps de mise en production et optimisant le cycle de release."
+        ],
+        "stack": ["Angular", "AngularJS", "Node.js", "TypeScript", "RxJS", "NgRx", "Nx", "SSR", "Cypress", "Jest", "GitLab CI", "Storybook"]
+      }
+    ]
+  },
+  "skills": {
+    "seoTitle": "Compétences — Ayoub Lafquih",
+    "seoDescription": "Compétences techniques : Vue/Nuxt, Angular, TypeScript, Node.js, NestJS, GraphQL, gRPC, Google Cloud, Auth0, Docker.",
+    "title": "Compétences",
+    "subtitle": "Les technologies avec lesquelles je travaille quotidiennement pour construire des applications modernes et scalables.",
+    "currentlyExploring": "En cours d'exploration",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "cloud": "Cloud & DevOps",
+      "security": "Sécurité & Architecture"
+    }
+  },
+  "contact": {
+    "seoTitle": "Contact — Ayoub Lafquih",
+    "seoDescription": "Contactez Ayoub Lafquih — Développeur Full Stack JavaScript disponible pour des postes en CDI, freelance et remote.",
+    "title": "Me contacter",
+    "subtitle": "Je suis toujours ouvert aux opportunités intéressantes, aux discussions techniques ou simplement à un café.",
+    "connect": "Restons en contact",
+    "available": "Disponible pour des opportunités",
+    "openTitle": "Ouvert à de nouveaux défis",
+    "openBody": "Que vous recherchiez un développeur Full Stack, un tech lead pour votre produit SaaS, ou un prestataire freelance — je serais ravi d'entendre parler de votre projet.",
+    "tags": {
+      "fulltime": "CDI",
+      "freelance": "Freelance",
+      "remote": "Remote",
+      "onsite": "Sur site (Lille / Paris)"
+    },
+    "cta": "M'envoyer un email",
+    "locationNote": "Basé entre Lille et Paris — disponible pour des missions remote et sur site en France & en Europe.",
+    "links": {
+      "email": "Email",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    }
+  }
+}

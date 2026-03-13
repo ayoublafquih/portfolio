@@ -1,0 +1,211 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "contact": "Contact",
+    "toggleMenu": "Toggle menu"
+  },
+  "footer": {
+    "role": "Full Stack JavaScript Engineer",
+    "built": "Built with Vue 3 & Vite.",
+    "location": "Paris – Lille, France"
+  },
+  "hero": {
+    "available": "Available for new opportunities",
+    "title": "Full Stack JavaScript Engineer",
+    "tagline": "SaaS · Data Platforms · E-commerce · AI Integration",
+    "description": "I build performant, secure and scalable web applications — SaaS platforms with real-time data, e-commerce journeys used by millions, and AI-powered tooling that cuts reporting time in half.",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "contact": "Contact me",
+    "scroll": "Scroll"
+  },
+  "about": {
+    "seoTitle": "About — Ayoub Lafquih",
+    "seoDescription": "Full Stack JavaScript Engineer specialised in SaaS platforms, e-commerce and data-driven applications. Based in Lille, available Paris & remote.",
+    "title": "About Me",
+    "subtitle": "Building performant, scalable and secure applications since 2019.",
+    "bio1": "I'm Ayoub Lafquih, a Full Stack JavaScript Engineer based between Lille and Paris. I've spent the last 6 years building production applications at Valiuz, Galeries Lafayette and Nordnet — from SaaS data platforms to e-commerce checkout flows used by millions.",
+    "bio2": "My stack centres on the modern JavaScript ecosystem: Vue/Nuxt and Angular on the frontend, Node.js/NestJS on the backend, and Google Cloud for infrastructure. I'm particularly drawn to architecture decisions that age well — feature flags, RBAC, gRPC contracts, and CI/CD pipelines that teams actually trust.",
+    "bio3": "Beyond the code, I care about developer experience, clean API design, and bridging the gap between engineering, product and data teams. I've led frontend teams, run code reviews, and helped junior developers grow — the people side of the work matters as much as the technical side.",
+    "stats": {
+      "years": "Years exp.",
+      "companies": "Companies",
+      "coffee": "Coffee cups"
+    },
+    "quickInfo": {
+      "title": "Quick info",
+      "location": "Location",
+      "role": "Role",
+      "roleValue": "Full Stack JS Engineer",
+      "languages": "Languages",
+      "languagesValue": "French, English, Arabic, German",
+      "email": "Email"
+    },
+    "availability": {
+      "title": "Available for opportunities",
+      "subtitle": "Open to full-time, freelance & remote positions"
+    },
+    "expertiseTitle": "Areas of Expertise",
+    "expertise": {
+      "saas": {
+        "title": "SaaS Architecture",
+        "description": "Design and build multi-tenant SaaS platforms with feature flags, role-based access control, and scalable microservices. Currently at Valiuz building a data visualisation platform on GCP."
+      },
+      "data": {
+        "title": "Data Visualization",
+        "description": "Create real-time dashboards and data platforms using GCP (BigQuery, Pub/Sub, Firestore), Prometheus and Grafana — turning complex datasets into actionable insights."
+      },
+      "ecommerce": {
+        "title": "E-commerce",
+        "description": "Built the full user journey at Galeries Lafayette with SAP Spartacus & Angular — search, recommendations, listings, product pages — driving a measurable increase in conversion rate."
+      },
+      "security": {
+        "title": "Security & Auth",
+        "description": "Implement robust authentication and authorisation with Auth0, JWT, RBAC and OAuth 2.0. Built access management systems across distributed SaaS and e-commerce architectures."
+      },
+      "ai": {
+        "title": "AI Integration",
+        "description": "Integrated Gemini AI at Valiuz to auto-generate Retail Media performance reports, cutting analysis production time by 40%. Experienced with LLM APIs and prompt engineering."
+      },
+      "leadership": {
+        "title": "Tech Leadership",
+        "description": "Led frontend teams at Galeries Lafayette, defined technical standards, ran code reviews and pair programming sessions, and mentored developers in agile environments."
+      }
+    },
+    "educationTitle": "Education",
+    "education": [
+      {
+        "degree": "Master — E-Services, Computer Science",
+        "school": "Université de Lille — Sciences et Technologies",
+        "period": "2018 — 2020"
+      }
+    ],
+    "certificationsTitle": "Certifications",
+    "certifications": [
+      {
+        "name": "Google Cloud Fundamentals: Core Infrastructure",
+        "issuer": "Google",
+        "date": "Oct 2025"
+      },
+      {
+        "name": "Configure Service Accounts and IAM Roles for Google Cloud",
+        "issuer": "Google Cloud Skill Badge",
+        "date": "Oct 2025"
+      },
+      {
+        "name": "Deploy Kubernetes Applications on Google Cloud",
+        "issuer": "Google Cloud Skill Badge",
+        "date": "Oct 2025"
+      },
+      {
+        "name": "Use APIs to Work with Cloud Storage",
+        "issuer": "Google Cloud Skill Badge",
+        "date": "Jul 2025"
+      },
+      {
+        "name": "Cloud Functions: 3 Ways",
+        "issuer": "Google Cloud Skill Badge",
+        "date": "Jul 2025"
+      },
+      {
+        "name": "Get Started with Pub/Sub",
+        "issuer": "Google Cloud Skill Badge",
+        "date": "Jul 2025"
+      },
+      {
+        "name": "Cloud Application Developer 2018 — Mastery Award for Educators",
+        "issuer": "IBM Academic",
+        "date": "2018"
+      }
+    ]
+  },
+  "experience": {
+    "seoTitle": "Experience — Ayoub Lafquih",
+    "seoDescription": "Full Stack JS Engineer — 6 years across SaaS, e-commerce and data platforms at Valiuz, Galeries Lafayette and Nordnet.",
+    "title": "Experience",
+    "subtitle": "6 years building production-grade applications at scale — SaaS, e-commerce and data platforms.",
+    "jobs": [
+      {
+        "role": "Full Stack Developer",
+        "company": "Valiuz",
+        "location": "Lille, France",
+        "period": "Mar 2024 — Present",
+        "bullets": [
+          "Designed and built a SaaS data visualisation platform with Nuxt 3 and GCP, making Retail Media insights accessible and readable for business teams across the group.",
+          "Developed NestJS microservices exposing gRPC and GraphQL APIs, with full documentation and unit/integration test suites.",
+          "Integrated Gemini AI to automatically generate Retail Media campaign performance reports, cutting analysis production time by 40%.",
+          "Implemented a feature flags system using Flagd, enabling safe and progressive rollouts without touching production configs.",
+          "Built an access management system with Auth0 and RBAC, controlling user permissions and data governance by business role.",
+          "Worked closely with data and product teams to ensure smooth integration and alignment between technical and business requirements."
+        ],
+        "stack": ["Nuxt 3", "NestJS", "GraphQL", "gRPC", "Auth0", "RBAC", "Gemini AI", "Flagd", "GCP", "Docker"]
+      },
+      {
+        "role": "Tech Lead Angular",
+        "company": "Galeries Lafayette",
+        "location": "Paris, France",
+        "period": "Sep 2022 — Dec 2023",
+        "bullets": [
+          "Designed and built the full e-commerce user journey — search, recommendations, product listings and product pages — with SAP Spartacus and Angular.",
+          "Deployed Google Tag Manager for user tracking, improving data accuracy and enabling marketing teams to make better-informed decisions.",
+          "Led a team of developers: managed the roadmap, ran code reviews, pair programming and pair testing sessions.",
+          "Maintained comprehensive technical documentation on Jira and Confluence, ensuring full traceability and alignment between engineering and business."
+        ],
+        "stack": ["Angular", "SAP Spartacus", "TypeScript", "GTM", "RxJS", "Node.js", "Jest", "GitLab CI"]
+      },
+      {
+        "role": "Angular / Node.js Developer",
+        "company": "Nordnet",
+        "location": "Lille, France",
+        "period": "Sep 2019 — Aug 2022",
+        "bullets": [
+          "Built several strategic web applications — Internet product sales, subsidy digitalisation — with Angular, RxJS, Nx, NgRx, SSR and Node.js.",
+          "Led the migration of a production AngularJS application to Angular 11, significantly improving performance and long-term maintainability.",
+          "Created a component library and design system with Storybook, reducing UI development time by 30% and establishing visual consistency across products.",
+          "Deployed an automated testing strategy with Cypress and Jest, cutting the regression rate in production.",
+          "Set up CI/CD pipelines on GitLab CI, reducing time-to-production and optimising the release cycle."
+        ],
+        "stack": ["Angular", "AngularJS", "Node.js", "TypeScript", "RxJS", "NgRx", "Nx", "SSR", "Cypress", "Jest", "GitLab CI", "Storybook"]
+      }
+    ]
+  },
+  "skills": {
+    "seoTitle": "Skills — Ayoub Lafquih",
+    "seoDescription": "Technical skills: Vue/Nuxt, Angular, TypeScript, Node.js, NestJS, GraphQL, gRPC, Google Cloud, Auth0, Docker.",
+    "title": "Skills",
+    "subtitle": "Technologies I work with daily to build modern, scalable applications.",
+    "currentlyExploring": "Currently Exploring",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "cloud": "Cloud & DevOps",
+      "security": "Security & Architecture"
+    }
+  },
+  "contact": {
+    "seoTitle": "Contact — Ayoub Lafquih",
+    "seoDescription": "Contact Ayoub Lafquih — Full Stack JavaScript Engineer available for full-time, freelance and remote opportunities.",
+    "title": "Get In Touch",
+    "subtitle": "I'm always open to interesting opportunities, technical discussions or simply a coffee chat.",
+    "connect": "Let's connect",
+    "available": "Available for opportunities",
+    "openTitle": "Open to new challenges",
+    "openBody": "Whether you're looking for a Full Stack engineer, a tech lead for your SaaS product, or a freelance contractor — I'd love to hear about your project.",
+    "tags": {
+      "fulltime": "Full-time",
+      "freelance": "Freelance",
+      "remote": "Remote",
+      "onsite": "On-site (Lille / Paris)"
+    },
+    "cta": "Send me an email",
+    "locationNote": "Based between Lille and Paris — available for remote and on-site engagements across France & Europe.",
+    "links": {
+      "email": "Email",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    }
+  }
+}
