@@ -10,8 +10,20 @@
 
       <!-- Bio grid -->
       <div class="grid md:grid-cols-2 gap-12 mb-20">
-        <!-- Left: text -->
-        <div ref="bioEl" class="opacity-0 space-y-5">
+        <!-- Left: photo + text -->
+        <div ref="bioEl" class="opacity-0 space-y-6">
+
+          <!-- Profile photo -->
+          <div class="about-photo-wrapper">
+            <img
+              :src="photo"
+              :alt="config.name.full"
+              class="about-photo"
+            />
+            <!-- Accent border frame -->
+            <div class="about-photo-accent" />
+          </div>
+
           <p class="text-text-secondary leading-relaxed">{{ $t('about.bio1') }}</p>
           <p class="text-text-secondary leading-relaxed">{{ $t('about.bio2') }}</p>
           <p class="text-text-secondary leading-relaxed">{{ $t('about.bio3') }}</p>
@@ -141,6 +153,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Icon } from '@iconify/vue'
 import ExpertiseCard from '@/components/about/ExpertiseCard.vue'
 import { config } from '@/config'
+import photo from '@/assets/images/photo.jpeg'
 
 const { t, tm } = useI18n()
 
@@ -215,3 +228,35 @@ onMounted(() => {
   })
 })
 </script>
+
+<style scoped>
+.about-photo-wrapper {
+  position: relative;
+  display: inline-block;
+  border-radius: 1.25rem;
+  overflow: visible;
+}
+
+.about-photo {
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 1.25rem;
+  display: block;
+  box-shadow:
+    0 20px 60px rgba(99, 102, 241, 0.2),
+    0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Offset accent border */
+.about-photo-accent {
+  position: absolute;
+  inset: -8px;
+  border-radius: 1.5rem;
+  border: 2px solid rgba(99, 102, 241, 0.35);
+  pointer-events: none;
+  z-index: -1;
+}
+</style>
